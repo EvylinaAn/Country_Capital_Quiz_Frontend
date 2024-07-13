@@ -51,3 +51,6 @@ Before getting on code, I started planning my backend requests and functions on 
 ![Planned design](<public/assets/Screenshot 2024-07-13 at 19.59.04.jpg>)
 ![Trello board](<public/assets/Screenshot 2024-07-13 at 19.59.19.jpg>)
 
+## Backend Repository
+
+https://github.com/EvylinaAn/Country_Capital_Quiz_Backend
