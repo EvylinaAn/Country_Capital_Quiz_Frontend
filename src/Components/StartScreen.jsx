@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useQuiz } from "../Context/QuizContext";
 
 export default function StartScreen() {
-  const { fetchQuizData, setShowQuiz, country, correctCapital, otherCapitals } = useQuiz();
+  const { fetchQuizData, setShowQuiz } = useQuiz();
 
   useEffect(() => {
     document.getElementById("my_modal_1").showModal();
@@ -20,13 +20,19 @@ export default function StartScreen() {
         <div className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">
-            Welcome to Countries and Capital Brain Teezer Quiz where you will be
-            given a country name, your job is to pick the right answer from the
-            given options. Press Start when you're ready!
+            Welcome to <b className="text-primary">Capital Conqueror</b>! Get
+            ready to embark on a thrilling adventure across the globe. Your
+            mission: Match each country to its rightful capital from the choices
+            given. When you’re ready to test your global savvy and conquer the
+            world of capitals, hit that Start button and let the challenge
+            begin!
           </p>
           <div className="modal-action justify-center">
             <form method="dialog">
-              <button className="btn btn-lg bg-primary text-white" onClick={handleStart}>
+              <button
+                className="btn btn-lg bg-primary text-white"
+                onClick={handleStart}
+              >
                 START
               </button>
             </form>
