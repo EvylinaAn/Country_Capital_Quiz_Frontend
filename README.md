@@ -51,6 +51,13 @@ Before getting on code, I started planning my backend requests and functions on 
 ![Planned design](<public/assets/Screenshot 2024-07-13 at 19.59.04.jpg>)
 ![Trello board](<public/assets/Screenshot 2024-07-13 at 19.59.19.jpg>)
 
+## Future Improvements
+
+- Deselect other countries once choice has been made
+- Set a time limit for user's response and automatically go to the next one after announcing the right answer
+- Set a end quiz button that takes the user back to the start screen when clicked
+- Implement Database storage to register users and user response (or local storage without user details)
+
 ## Backend Repository
 
 https://github.com/EvylinaAn/Country_Capital_Quiz_Backend
