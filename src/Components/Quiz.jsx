@@ -21,15 +21,16 @@ export default function Quiz() {
   };
 
   return (
-    <div>
+    <div className="mt-10">
       {showQuiz && (
-        <div className="mt-4 text-center">
+        <>
+        <div className="text-center">
           <h2 className="text-2xl font-bold">{country}</h2>
           <ul className="mt-4">
             {shuffledCapitals.map((capital, index) => (
               <li key={index}>
                 <button
-                  className="btn btn-lg mt-2 w-3/4"
+                  className="btn btn-lg mt-2 w-3/4 "
                   onClick={() => handleResponse(capital)}
                 >
                   {capital}
@@ -38,15 +39,23 @@ export default function Quiz() {
             ))}
           </ul>
         </div>
-      )}
+      
       {result && (
         <p
           className={`mt-4 text-lg ${
-            result.includes("CORRECT!") ? "text-primary" : "text-red"
+            result.includes("CORRECT!") ? "text-accent" : "text-error"
           }`}
         >
           {result}
         </p>
+      )}
+      <button
+        className="btn btn-primary btn-sm mx-auto mt-10 w-2/4"
+        onClick={handleNextCountry}
+      >
+        Next Country
+      </button>
+      </>
       )}
     </div>
   );
