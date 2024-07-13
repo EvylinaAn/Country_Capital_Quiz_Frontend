@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Capital Conqueror
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Capital Conqueror is an interactive quiz game that challenges players to match countries with their capital cities. Test your geography knowledge and learn about capitals from around the world!
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Random selection of countries and capitals
+- Multiple choice quiz format
+- Immediate feedback on correct and incorrect answers
+- Responsive design for various screen sizes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- Node.js
+- Express.js 
+- Axios
+- Tailwind
+- DaisyUI
+- GitHub
+- Excalidraw
+- Trello
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this project locally, follow these steps:
 
-### `npm run build`
+1. Clone the repository
+2. Navigate to the project directory
+3. Install dependencies   ---   npm install
+4. Start the development server   ---   npm start
+5. Navigate to localhost:3000 on the browser
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As soon as you load the server you will be presented with a Welcome message. To begin the quiz, simply click START.
+- A random country will appear on the screen with 3 choices. 
+- Select the right answer, it's okay if you get it wrong as you will be prompted with the right answer.
+- Once you're happy with the result click 'Next Country'
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API Reference
 
-### `npm run eject`
+Countries Data API - https://countriesnow.space/api/v0.1/countries/capital
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Planning 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Before getting on code, I started planning my backend requests and functions on Trello, I also used Excalidraw to plan the layout. Although there were a few things I wasn't able to achieve due to time restrictions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Planned design](<public/assets/Screenshot 2024-07-13 at 19.59.04.jpg>)
