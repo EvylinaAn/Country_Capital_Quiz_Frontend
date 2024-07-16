@@ -6,8 +6,10 @@ export default function Quiz() {
     useQuiz();
 
   const [result, setResult] = useState("");
+  const [selected, setSelected] = useState(false)
 
   const handleResponse = (selectedResponse) => {
+    setSelected(true)
     if (selectedResponse === correctCapital) {
       setResult("CORRECT!");
     } else {
@@ -17,6 +19,7 @@ export default function Quiz() {
 
   const handleNextCountry = () => {
     setResult("");
+    setSelected(false)
     fetchQuizData();
   };
 
@@ -34,6 +37,7 @@ export default function Quiz() {
                 <button
                   className="btn btn-lg mt-2 w-3/4 bg-secondary text-white"
                   onClick={() => handleResponse(capital)}
+                  disabled={selected}
                 >
                   {capital}
                 </button>
