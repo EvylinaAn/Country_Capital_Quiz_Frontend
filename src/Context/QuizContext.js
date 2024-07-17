@@ -38,7 +38,7 @@ export function QuizProvider({ children }) {
     }
   };
 
-  console.log(country, correctCapital, otherCapitals)
+  // console.log(country, correctCapital, otherCapitals)
 
   return (
     <QuizContext.Provider

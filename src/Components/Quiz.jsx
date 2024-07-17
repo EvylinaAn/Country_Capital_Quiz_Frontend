@@ -16,7 +16,7 @@ export default function Quiz() {
       setResult("CORRECT!");
     } else {
       setResult(
-        `Wrong! The correct answer is ${correctCapital?.toUpperCase()}`
+        `Wrong! The correct answer is ${correctCapital.toUpperCase()}`
       );
     }
   };
