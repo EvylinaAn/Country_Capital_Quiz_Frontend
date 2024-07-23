@@ -5,24 +5,19 @@ export default function Quiz() {
   const { fetchQuizData, showQuiz, country, correctCapital, shuffledCapitals } =
     useQuiz();
 
-  const [result, setResult] = useState("");
+  // Added a new state variable here to track if answer is correct 
+  const [isCorrect, setIsCorrect] = useState('')
+  // track if user has made a choice and disable button if true
   const [selected, setSelected] = useState(false);
 
-  
 
   const handleResponse = (selectedResponse) => {
+    setIsCorrect(correctCapital === selectedResponse)
     setSelected(true);
-    if (selectedResponse === correctCapital) {
-      setResult("CORRECT!");
-    } else {
-      setResult(
-        `Wrong! The correct answer is ${correctCapital.toUpperCase()}`
-      );
-    }
   };
 
   const handleNextCountry = () => {
-    setResult("");
+    setIsCorrect('')
     setSelected(false);
     fetchQuizData();
   };
@@ -57,13 +52,9 @@ export default function Quiz() {
             Next Country
           </button>
 
-          {result && (
-            <p
-              className={`mt-5 text-3xl ${
-                result.includes("CORRECT!") ? "text-accent" : "text-error"
-              }`}
-            >
-              {result}
+          {selected && (
+            <p className={`mt-5 text-3xl ${isCorrect ? "text-accent" : "text-error"}`}>
+              {isCorrect ? 'Congrats, that is correct!' : `Wrong! The correct answer is ${correctCapital.toUpperCase()}`}
             </p>
           )}
         </>
