@@ -1,22 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useQuiz } from "../Context/QuizContext";
 
 export default function StartScreen() {
   const { fetchQuizData, setShowQuiz } = useQuiz();
-
-  useEffect(() => {
-    document.getElementById("my_modal_1").showModal();
-  }, []);
+  const [ isOpen, setIsOpen ] = useState(true)
 
   const handleStart = async () => {
     await fetchQuizData();
     setShowQuiz(true);
-    document.getElementById("my_modal_1").close();
+    setIsOpen(false)
   };
 
   return (
     <div>
-      <dialog id="my_modal_1" className="modal">
+     {isOpen && ( 
+     <dialog open className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">
@@ -39,6 +37,7 @@ export default function StartScreen() {
           </div>
         </div>
       </dialog>
+     )} 
     </div>
   );
 }

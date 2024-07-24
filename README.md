@@ -32,6 +32,11 @@ To run this project locally, follow these steps:
 3. Install dependencies   ---   npm install
 4. Start the development server   ---   npm start
 5. Navigate to localhost:3000 on the browser
+6. Create a '.env' file in the root and add the necessary variables mentioned below.
+
+## Environment Variables
+
+1. 'REACT_APP_BACKEND_URL': the value should be the backend url eg. http://localhost:4000
 
 ## Usage
 
