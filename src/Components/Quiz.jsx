@@ -17,7 +17,7 @@ export default function Quiz() {
   };
 
   const handleNextCountry = () => {
-    setIsCorrect('')
+    // setIsCorrect('')
     setSelected(false);
     fetchQuizData();
   };

@@ -13,6 +13,9 @@ export function QuizProvider({ children }) {
   const [otherCapitals, setOtherCapitals] = useState([]);
   const [showQuiz, setShowQuiz] = useState(false);
   const [shuffledCapitals, setShuffledCapitals] = useState([]);
+  // const [options, setOptions] = useState([])
+  // const [ isCorrect, setIsCorrect ] = useState(null)
+  // const [ selectedAns, setSelectedAns ] = useState('')
 
   const shuffleCapitals = (correct, others) => {
     const allCapitals = [correct, ...others];
@@ -33,10 +36,28 @@ export function QuizProvider({ children }) {
       setCorrectCapital(result.countryCapital);
       setOtherCapitals(result.falseCapitals);
       shuffleCapitals(result.countryCapital, result.falseCapitals);
+      //  const { randomCountry , options } = response.data
+      //  setCountry(randomCountry)
+      //  setOptions(options)
     } catch (error) {
       console.error("Couldn't fetch Country", error);
     }
   };
+
+  // const checkResponse = async(selectedAnswer) => {
+  // if (selectedAnswer) {
+  //   try {
+  //     const response = await axios.post(
+  //       `${process.env.REACT_APP_BACKEND_URL}/checkResponse`, {
+  //         answer : selectedAnswer
+  //       }
+  //     )
+  //     setIsCorrect(response.data.isCorrect)
+  //   } catch (error) {
+      
+  //   }
+    // }
+  // }
 
   // console.log(country, correctCapital, otherCapitals)
 
@@ -51,6 +72,11 @@ export function QuizProvider({ children }) {
         otherCapitals,
         showQuiz,
         shuffledCapitals,
+
+        // options,
+        // isCorrect,
+        // setSelectedAns,
+        // checkResponse
       }}
     >
       {children}
